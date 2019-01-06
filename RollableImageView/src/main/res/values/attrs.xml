@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RollableImageView">
+        <attr name="riv_rolldirection" format="integer">
+            <enum name="RIGHT" value="1"/>
+            <enum name="LEFT" value="2"/>
+            <enum name="UP" value="3"/>
+            <enum name="down" value="4"/>
+        </attr>
+        <attr name="riv_repeatTime" format="integer"/>
+        <attr name="riv_duration" format="integer"/>
+        <attr name="riv_auto_play" format="boolean"/>
+    </declare-styleable>
+</resources>
