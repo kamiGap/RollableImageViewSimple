@@ -52,7 +52,7 @@ public class RollableImageView extends AppCompatImageView {
     private boolean isAutoPlay; // 是否自动播放
 
     @RollDirection
-    private int mRollDirection = 1;
+    private int mRollDirection = RIGHT;
 
     public RollableImageView(Context context) {
         this(context, null);
@@ -202,10 +202,10 @@ public class RollableImageView extends AppCompatImageView {
         if (mOverScroller.computeScrollOffset()) {
             if (isRollHorizontal()) {
                 final int x = mOverScroller.getCurrX();
-                nowPoint = abs(x);
+                nowPoint = abs(x) % bitmapWidth;
             }else {
                 final int y = mOverScroller.getCurrY();
-                nowPoint = abs(y);
+                nowPoint = abs(y) % bitmapHeight;
             }
             postInvalidateOnAnimation();
         } else if (isInfinite) {
@@ -268,7 +268,7 @@ public class RollableImageView extends AppCompatImageView {
         postInvalidateOnAnimation();
     }
 
-    @IntDef
+    @IntDef({RIGHT, LEFT, UP, DOWN})
     @Target({ElementType.PARAMETER, ElementType.FIELD})
     @Retention(RetentionPolicy.CLASS)
     public @interface RollDirection {
