@@ -16,7 +16,7 @@ xml参数
 | ----------------- | ------------ | ------------------------------------- |
 | riv_rolldirection | Right        | 滚动方向 可选参数 right left top down |
 | riv_repeatTime    | 0            | 滚动次数 0为无限循环                  |
-| riv_duration      | 5000         | 持续时间                              |
+| riv_duration      | 400         | 持续时间                              |
 | riv_auto_play     | 是否自动播放 | 是否自动播放                          |
 
 代码调用
